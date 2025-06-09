@@ -6,13 +6,7 @@
 ## Function
 
 
-## Implementation Resources
-
-
-## Implementation Process
-
-
-## Usage
+## Installation
 
 
 ## Demo
@@ -22,9 +16,6 @@
 
 
 ## Job Assignment
-
-
-## Credits
 
 
 ## References
