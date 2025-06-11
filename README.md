@@ -77,7 +77,7 @@ Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集�
   服務只有 `create`、`restart` 和 `remove`，並且可輸入 `replicas` 參數，若不輸入則預設值為 1
   
   範例結果：
-  ![image](https://github.com/user-attachments/assets/5da49c8c-3008-4e23-b736-b4272c878f00)
+  ![image](https://github.com/user-attachments/assets/4d28036a-f57b-4c99-9db5-bc9585b90507)
 
 
 ## Improvement
