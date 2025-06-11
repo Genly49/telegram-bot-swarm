@@ -8,7 +8,18 @@
 本專題以 Python 作為串接 Telegram Bot 的媒介，接收來自 Telegram 定義的指令。
 Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集與查詢監控資料，而每個節點都有跑 cAdvisor 與 Node_Exporter 以提供 Prometheus 相關節點與容器的監控資料。
 
+## Prerequisite
+* Docker Swarm Node x3
+  * Manager - LSA
+  * Worker - LSAT2
+  * Worker - LSAT3
+* Python3
+
 ## Installation
+**In Manager Node**
+git clone https://github.com/Genly49/telegram-bot-swarm.git
+pip install python-telegram-bot requests docker python-dotenv matplotlib pandas ace-tools-open
+cd swarm
 
 
 ## Demo
