@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 20s #Scrape interval to every 20 seconds.
+  evaluation_interval: 20s #Evaluate rules every 20 seconds.
+  
+scrape_configs:
+  - job_name: "prometheus"
+    # metrics_path defaults to '/metrics'
+    static_configs:
+      - targets:
+        - "LSA:9090"
+
+  - job_name: "cadvisor"
+    static_configs:
+      - targets:
+        - "LSA:8080"
+        - "LSAT2:8080"
+        - "LSAT3:8080"
+
+  - job_name: "node_exporter"
+    static_configs:
+      - targets:
+        - "LSA:9100"
+        - "LSAT2:9100"
+        - "LSAT3:9100"

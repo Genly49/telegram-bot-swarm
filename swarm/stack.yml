@@ -1,0 +1,58 @@
+version: '3.8'
+services:
+  cadvisor:
+    container_name: cadvisor
+    image: gcr.io/cadvisor/cadvisor:latest
+    labels:
+      - "character=cadvisor"
+    network_mode: "host"
+    ports:
+     - "8080:8080"
+    volumes: 
+      - "/:/rootfs"
+      - "/var/run:/var/run"
+      - "/sys:/sys"
+      - "/var/lib/docker/:/var/lib/docker"
+      - "/dev/disk/:/dev/disk"
+    privileged: true
+    devices: 
+      - "/dev/kmsg"
+    deploy:
+      mode: global
+
+  node_exporter:
+    container_name: node_exporter
+    image: quay.io/prometheus/node-exporter:latest
+    labels:
+      - "character=node_exporter"
+    command:
+      - '--path.rootfs=/host'
+    network_mode: host
+    ports:
+     - "9100:9100"
+    pid: host
+    volumes:
+      - '/:/host:ro,rslave'
+    deploy:
+      mode: global
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    labels:
+        - "character=prometheus"
+    network_mode: "host"
+    ports:
+     - "9090:9090"
+    volumes: 
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+    privileged: true
+    depends_on:
+      - cadvisor
+      - node_exporter
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
