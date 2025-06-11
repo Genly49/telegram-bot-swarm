@@ -20,8 +20,11 @@ Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集�
 ## Installation
 **In Manager Node**
 `git clone https://github.com/Genly49/telegram-bot-swarm.git`
+
 `pip install python-telegram-bot requests docker python-dotenv matplotlib pandas ace-tools-open`
+
 `cd swarm`
+
 `docker`
 
 ## Demo
