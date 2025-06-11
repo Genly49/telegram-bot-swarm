@@ -97,7 +97,7 @@ https://docs.docker.com/get-started/
 
 https://prometheus.io/docs/introduction/overview/
 
-cAdvisorhttps://github.com/google/cadvisor.git
+https://github.com/google/cadvisor.git
 
 https://github.com/prometheus/node_exporter.git
 
