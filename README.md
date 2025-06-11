@@ -39,6 +39,8 @@ Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集�
   參數：cpu - CPU / ram - 記憶體 / disk - 儲存空間 / rx - 下載速度 / tx - 上傳速度 / load - 系統負載
   
   範例結果：
+  ![image](https://github.com/user-attachments/assets/5efa8642-c5c3-4d30-8186-b457e84d1083)
+
 
 * /con
   
@@ -51,6 +53,8 @@ Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集�
   參數：cpu - CPU / ram - 記憶體 / rx - 下載速度 / tx - 上傳速度
   
   範例結果：
+  ![image](https://github.com/user-attachments/assets/aca17630-c28d-45a4-8347-1bc7bc7a2e9c)
+
 
 * /ls
   
@@ -61,6 +65,8 @@ Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集�
   參數：node - 節點 / con - 容器（需要節點名稱參數） / ser - 服務
   
   範例結果：
+  ![image](https://github.com/user-attachments/assets/db1ae707-668d-4ad0-a3f2-c4b339d84695)
+
 
 * /modify
   
@@ -70,12 +76,13 @@ Swarm 中則包含多個節點，其中 Manager 節點跑 Prometheus 以收集�
   
   服務只有 `create`、`restart` 和 `remove`，並且可輸入 `replicas` 參數，若不輸入則預設值為 1
   
-  範例結果：<img width="462" alt="image" src="https://github.com/user-attachments/assets/8d52e095-1200-41ca-8df2-9a720867d7c6" />
+  範例結果：
+  ![image](https://github.com/user-attachments/assets/5da49c8c-3008-4e23-b736-b4272c878f00)
 
 
 ## Improvement
 * 文字回傳結果格式優化
-* 指令進一步分隔，例如容器與服務分開
+* 指令進一步分隔，例如容器與服務分開、多種圖表資源數值
 * 映像檔抓取特定版本並使用
 * 容器或服務建立時包含標籤
 * 資源使用警報
